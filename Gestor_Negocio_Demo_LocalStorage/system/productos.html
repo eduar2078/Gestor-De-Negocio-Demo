@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos · Gestor Demo</title>
+  <link rel="stylesheet" href="../css/productos.css">
+ 
+</head>
+<body>
+  <header class="topbar">
+  <div class="brand">Gestor Negocio · Demo</div>
+  <nav class="menu">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="inventario.html">Inventario</a>
+    <a href="compras.html">Compras</a>
+    <a href="ventas.html">Ventas</a>
+    <a href="productos.html">Productos</a>
+    <a href="#" id="logoutBtn">Salir</a>
+  </nav>
+</header>
+<script src="../assets/js/db.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script src="../assets/js/limit.js"></script>
+<script>requireAuth(); bindLogout();</script>
+
+  <main class="container">
+    <div class="modern-card">
+      <h2>Productos</h2>
+      <table class="modern-table" id="tablaProductos">
+        <thead>
+          <tr><th>SKU</th><th>Nombre</th><th>Precio</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="../assets/js/modules/productos.js"></script>
+</body>
+</html>

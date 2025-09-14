@@ -1,0 +1,340 @@
+
+/* === ESTILOS EXCLUSIVOS PARA EL TOPBAR === */
+.topbar {
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 100;
+}
+
+.topbar .brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.topbar .brand::before {
+  content: "\f201";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: #e74c3c;
+}
+
+.topbar .menu {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.topbar .menu a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.topbar .menu a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.7s ease;
+}
+
+.topbar .menu a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.topbar .menu a:hover::before {
+  left: 100%;
+}
+
+.topbar .menu a i {
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+#logoutBtn {
+  background: rgba(231, 76, 60, 0.2);
+  border: 1px solid rgba(231, 76, 60, 0.4);
+  margin-left: 0.5rem;
+}
+
+#logoutBtn:hover {
+  background: rgba(231, 76, 60, 0.3);
+}
+.dashboard {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2em;
+}
+
+h2 {
+  color: #3498db;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  font-size: 1.5em;
+}
+
+.btn {
+  display: inline-block;
+  background: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.btn:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+.error {
+  color: #e74c3c;
+  background: #fde8e8;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 15px 0;
+  display: block;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+select,
+input[type="number"] {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+  flex-grow: 1;
+  min-width: 200px;
+  transition: border 0.3s;
+}
+
+select:focus,
+input[type="number"]:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+table th {
+  background-color: #3498db;
+  color: white;
+  text-align: left;
+  padding: 12px 15px;
+}
+
+table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+
+table tr:hover td {
+  background-color: #f8f9fa;
+}
+
+table tr:last-child td {
+  border-bottom: 2px solid #3498db;
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+/* RESET BASICO */
+.inventario-container * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ESTRUCTURA PRINCIPAL */
+.inventario-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+/* HEADER */
+.inventario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.inventario-title {
+  font-size: 1.8rem;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* BOTONES */
+.inventario-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #6c63ff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.inventario-btn:hover {
+  background: #5a52e0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ESTADÍSTICAS */
+.inventario-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #6c63ff;
+  margin: 0.5rem 0;
+}
+
+.stat-label {
+  color: #64748b;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+/* TABLA */
+.inventario-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #e2e8f0;
+  margin: 2rem 0;
+}
+
+.inventario-table th {
+  background: #6c63ff;
+  color: white;
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.inventario-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+}
+
+.inventario-table tr:last-child td {
+  border-bottom: none;
+}
+
+.inventario-table tr:hover td {
+  background-color: #f8fafc;
+}
+
+.valor-total {
+  font-weight: 700;
+  color: #10b981;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .inventario-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .inventario-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .inventario-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

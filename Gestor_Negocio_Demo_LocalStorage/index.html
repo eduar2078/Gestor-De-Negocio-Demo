@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestor Negocio - Demo</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Gestor Negocio - Demo</h2>
+    <form id="loginForm">
+      <input type="email" id="correo" placeholder="Correo" required />
+      <input type="password" id="password" placeholder="Contraseña" required />
+      <button type="submit">Ingresar</button>
+    </form>
+    <p id="error" class="error" style="display:none;"></p>
+    <p class="hint">Usuario: <b>admin@demo.com</b> · Contraseña: <b>12345</b></p>
+  </div>
+
+  <script src="assets/js/db.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const correo = document.getElementById('correo').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const ok = login(correo, password);
+      if (ok) {
+        window.location.href = 'system/dashboard.html';
+      } else {
+        const el = document.getElementById('error');
+        el.textContent = 'Credenciales inválidas en la demo.';
+        el.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+
+</html>
