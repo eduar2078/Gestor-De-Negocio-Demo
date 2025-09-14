@@ -1,0 +1,34 @@
+/* === LOGIN === */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #4a6cf7, #6ec1e4);
+}
+
+.login-box {
+  background: var(--color-light);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 350px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+}
+
+.login-box button {
+  width: 100%;
+  margin-top: 15px;
+}

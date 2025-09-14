@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ventas · Gestor Demo</title>
+  <link rel="stylesheet" href="../css/ventas.css">
+
+</head>
+<body>
+  <header class="topbar">
+  <div class="brand">Gestor Negocio · Demo</div>
+  <nav class="menu">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="inventario.html">Inventario</a>
+    <a href="compras.html">Compras</a>
+    <a href="ventas.html">Ventas</a>
+    <a href="productos.html">Productos</a>
+    <a href="#" id="logoutBtn">Salir</a>
+  </nav>
+</header>
+<script src="../assets/js/db.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script src="../assets/js/limit.js"></script>
+<script>requireAuth(); bindLogout();</script>
+
+  <main class="container">
+    <div class="modern-card">
+      <h2>Registrar venta</h2>
+      <form id="formVenta" class="form-grid">
+        <select id="productoVenta" required></select>
+        <input type="number" id="cantidadVenta" placeholder="Cantidad" required />
+        <button type="submit" class="btn">Vender</button>
+      </form>
+      <p class="demo-note">Demo limitada: máximo <span id="limitVal"></span> ventas.</p>
+    </div>
+
+    <div class="modern-card">
+      <h2>Historial de ventas</h2>
+      <table class="modern-table" id="tablaVentas">
+        <thead>
+          <tr>
+            <th>Fecha</th><th>Producto</th><th>Cantidad</th><th>Total</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="../assets/js/modules/ventas.js"></script>
+</body>
+</html>

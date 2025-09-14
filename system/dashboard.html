@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard · Gestor Demo</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <i class="fas fa-chart-line"></i>
+        <span>Gestor Negocio · Demo</span>
+      </div>
+      <nav class="menu">
+        <a href="dashboard.html" class="active">
+          <i class="fas fa-home"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="inventario.html">
+          <i class="fas fa-boxes"></i>
+          <span>Inventario</span>
+        </a>
+        <a href="compras.html">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Compras</span>
+        </a>
+        <a href="ventas.html">
+          <i class="fas fa-cash-register"></i>
+          <span>Ventas</span>
+        </a>
+        <a href="productos.html">
+          <i class="fas fa-tags"></i>
+          <span>Productos</span>
+        </a>
+        <a href="../index.html" id="logoutBtn">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Salir</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="dashboard-header">
+        <h1 class="dashboard-title">Panel de Control</h1>
+        <div class="user-profile">
+          <div class="user-avatar">JD</div>
+          <div class="user-info">
+            <span class="user-name">John Doe</span>
+            <span class="user-role">Administrador</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Tarjetas de métricas -->
+      <section class="cards">
+        <div class="metric-card">
+          <h2 class="metric-title">
+            <i class="fas fa-boxes"></i>
+            Inventario
+          </h2>
+          <p class="metric-value" id="invCount">1,248</p>
+          <a href="inventario.html" class="btn btn-outline">
+            <i class="fas fa-external-link-alt"></i>
+            Acceder
+          </a>
+        </div>
+        <div class="metric-card">
+          <h2 class="metric-title">
+            <i class="fas fa-shopping-cart"></i>
+            Compras
+          </h2>
+          <p class="metric-value" id="comprasCount">342</p>
+          <a href="compras.html" class="btn btn-outline">
+            <i class="fas fa-external-link-alt"></i>
+            Acceder
+          </a>
+        </div>
+        <div class="metric-card">
+          <h2 class="metric-title">
+            <i class="fas fa-cash-register"></i>
+            Ventas
+          </h2>
+          <p class="metric-value" id="ventasCount">896</p>
+          <a href="ventas.html" class="btn btn-outline">
+            <i class="fas fa-external-link-alt"></i>
+            Acceder
+          </a>
+        </div>
+      </section>
+
+      <!-- Estadísticas -->
+      <section class="stats">
+        <div class="stat-card">
+          <div class="stat-icon icon-stock">
+            <i class="fas fa-box"></i>
+          </div>
+          <div class="stat-value" id="stockTotal">5,842</div>
+          <div class="stat-label">Unidades en stock</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon icon-value">
+            <i class="fas fa-dollar-sign"></i>
+          </div>
+          <div class="stat-value" id="valorTotal">$142,580</div>
+          <div class="stat-label">Valor total del stock</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon icon-ticket">
+            <i class="fas fa-receipt"></i>
+          </div>
+          <div class="stat-value" id="ticketPromedio">$159.20</div>
+          <div class="stat-label">Ticket promedio (ventas)</div>
+        </div>
+      </section>
+    </main>
+  </div>
+   
+  <script src="../assets/js/dashboard.js"></script>
+
+</body>
+
+</html>
